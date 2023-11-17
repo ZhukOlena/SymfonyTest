@@ -4,8 +4,8 @@
 
 {% block body %}
     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gab-4">
-        {% if postRepository|length > 0 %}
-            {%  for post in postRepository %}
+        {% if posts|length > 0 %}
+            {%  for post in posts %}
                 {{ include('micro_post/_post.html.twig', {post: post}) }}
             {% endfor %}
         {% else %}
@@ -13,3 +13,4 @@
         {% endif %}
     </div>
 {% endblock %}
+
